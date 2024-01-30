@@ -3,9 +3,9 @@ package handlers
 import (
 	"net/http"
 
-	"github.com/vampi29/bookings/pkg/config"
-	"github.com/vampi29/bookings/pkg/models"
-	"github.com/vampi29/bookings/pkg/render"
+	"github.com/alerdm/bookings/pkg/config"
+	"github.com/alerdm/bookings/pkg/models"
+	"github.com/alerdm/bookings/pkg/render"
 )
 
 // Repo the repository used by the handlers

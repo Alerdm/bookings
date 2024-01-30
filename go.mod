@@ -1,4 +1,4 @@
-module github.com/vampi29/bookings
+module github.com/alerdm/bookings
 
 go 1.20
 
