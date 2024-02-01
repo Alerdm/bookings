@@ -1,0 +1,40 @@
+{{template "base" .}}
+
+{{define "content"}}
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1>Make a Reservation</h1>
+            <p>Reservation Details</p>
+
+            <form action="/make-reservation" method="post" class="" novalidate>
+                <input type="hidden" name="csrf_token" value="{{.CSRFToken}}">
+                <div class="form-group mt-5">
+                    <label for="first-name">First name:</label>
+                    <input type="text" name="first-name" id="first-name" class="form-control" required autocomplete="off">
+                </div>
+                
+                <div class="form-group">
+                    <label for="last-name">last name:</label>
+                    <input type="text" name="last-name" id="last-name" class="form-control" required autocomplete="off">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="text" name="email" id="email" class="form-control" required autocomplete="off">
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone number:</label>
+                    <input type="text" name="phone" id="phone" class="form-control" required autocomplete="off">
+                </div>
+
+                <br>
+
+                <input type="submit" class="btn btn-primary" class="form-control" value="Make Reservation">
+
+            </form>
+        </div>
+    </div>
+</div>
+{{end}}

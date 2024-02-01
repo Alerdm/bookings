@@ -7,6 +7,7 @@ import (
 	"net/http"
 
 	"github.com/alerdm/bookings/internal/config"
+	"github.com/alerdm/bookings/internal/forms"
 	"github.com/alerdm/bookings/internal/models"
 	"github.com/alerdm/bookings/internal/render"
 )
@@ -50,6 +51,17 @@ func (m *Repository) About(w http.ResponseWriter, r *http.Request) {
 	render.RenderTemplate(w, r, "about.page.tmpl", &models.TemplateData{
 		StringMap: stringMap,
 	})
+}
+
+// Reservation renders the make a resevation page and displays form
+func (m *Repository) Reservation(w http.ResponseWriter, r *http.Request) {
+	render.RenderTemplate(w, r, "make-reservation.page.tmpl", &models.TemplateData{
+		Form: forms.New(nil),
+	})
+}
+
+// PostReservation handles the posting of a reservation form
+func (m *Repository) PostReservation(w http.ResponseWriter, r *http.Request) {
 }
 
 // Generals renders the room page

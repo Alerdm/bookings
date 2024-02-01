@@ -1,5 +1,7 @@
 package models
 
+import "github.com/alerdm/bookings/internal/forms"
+
 // TemplateData holds data sent from handlers to
 type TemplateData struct {
 	StringMap map[string]string
@@ -10,4 +12,5 @@ type TemplateData struct {
 	Flash     string
 	Warning   string
 	Error     string
+	Form      *forms.Form
 }
