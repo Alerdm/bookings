@@ -7,9 +7,9 @@ import (
 	"time" 
 
 	"github.com/alexedwards/scs/v2"
-	"github.com/alerdm/bookings/pkg/config"
-	"github.com/alerdm/bookings/pkg/handlers"
-	"github.com/alerdm/bookings/pkg/render"
+	"github.com/alerdm/bookings/internal/config"
+	"github.com/alerdm/bookings/internal/handlers"
+	"github.com/alerdm/bookings/internal/render"
 )
 
 var portNumber = ":8080"
