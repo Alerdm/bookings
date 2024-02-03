@@ -5,5 +5,5 @@ type Reservation struct {
 	FirstName string
 	LastName  string
 	Email     string
-	PHone     string
+	Phone     string
 }
