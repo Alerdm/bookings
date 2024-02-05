@@ -1,15 +1,17 @@
 package main
 
 import (
+	"encoding/gob"
 	"fmt"
 	"log"
 	"net/http"
-	"time" 
+	"time"
 
-	"github.com/alexedwards/scs/v2"
 	"github.com/alerdm/bookings/internal/config"
 	"github.com/alerdm/bookings/internal/handlers"
+	"github.com/alerdm/bookings/internal/models"
 	"github.com/alerdm/bookings/internal/render"
+	"github.com/alexedwards/scs/v2"
 )
 
 var portNumber = ":8080"
@@ -18,6 +20,9 @@ var session *scs.SessionManager
 
 // main is the main application funcion
 func main() {
+	// what am I going to put in the session
+	gob.Register(models.Reservation{})
+
 	// change this to true when in production
 	app.InProduction = false
 
